@@ -6,9 +6,9 @@
   tasks:
   - name: Print No greater than
     ansible.builtin.debug:
-      msg: "Given Number {{NO}} is Greater than 10"
+      msg: "Given Number {{NUM}} is Greater than 10"
     when: NUM >= 10
   - name: Print No less than 10
     ansible.builtin.debug:
-      msg: "Given Number {{NO}} is less than 10"
+      msg: "Given Number {{NUM}} is less than 10"
     when: NUM <= 10
