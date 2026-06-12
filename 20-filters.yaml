@@ -37,7 +37,7 @@
         age: 22
         surname: kaki
     ansible.builtin.debug:
-      msg: "TO map is {{ names | dict2items }}"
+      msg: "TO list is {{ names | dict2items }}"
   - name: Convert list to map
     vars:
      names:
@@ -46,3 +46,8 @@
       - {'key': 'surname', 'value': 'kaki'}
     ansible.builtin.debug:
       msg: "TO map is {{ names | items2dict }}"
+  - name: check IP
+    vars:
+      ip: 6757.877.22.1
+    ansible.builtin.debug:
+      msg: "TO map is {{ ip | ansible.utils.ipaddr }}"
