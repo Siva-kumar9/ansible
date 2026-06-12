@@ -15,4 +15,4 @@
   tasks:
   - name: Print Variables
     ansible.builtin.debug:
-      msg: "These Course is {{COURSE}} , Duration is {{DURATION}} , is it LIVE?, Topics are {{TOPICS}} Tools are {{TOOLS}}"
+      msg: "These Course is {{COURSE}} , Duration is {{DURATION}} , is it LIVE?:, Topics are {{TOPICS}} Tools are {{TOOLS}}"
