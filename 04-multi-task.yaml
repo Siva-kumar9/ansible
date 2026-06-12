@@ -10,6 +10,6 @@
   hosts: local
   connection: local
   tasks:
-  - name: PLAY2 AND TASK2
+  - name: PLAY2 AND TASK1
     ansible.builtin.debug:
       msg: "Hello From Play2 and Task1"
