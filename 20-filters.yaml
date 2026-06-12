@@ -24,6 +24,10 @@
     vars:
       name: [100,200,300,500,400,150,325,55]
     ansible.builtin.debug:
-      msg: "TO Upper is {{ name | max }}"
-
+      msg: "TO Upper is {{ maxi is | max }}"
+  - name: Print mini
+    vars:
+      name: [100,200,300,500,400,150,325,55]
+    ansible.builtin.debug:
+      msg: "TO Upper is {{ mini is | min }}"
 
