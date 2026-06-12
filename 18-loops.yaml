@@ -1,0 +1,9 @@
+- name: "Loops"
+  hosts:  web
+  tasks:
+  - name: "Print Nammes"
+    ansible.builtin.debug:
+      msg: "Hello My Name is {{items}}"
+    loop:
+      - Sivakumar
+      - ramesh
