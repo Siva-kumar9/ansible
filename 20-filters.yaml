@@ -50,4 +50,4 @@
     vars:
       ip: 6757.877.22.1
     ansible.builtin.debug:
-      msg: "TO map is {{ ip | ansible.utils.ipaddr }}"
+      msg: "TO ipaddress is {{ ip | ansible.utils.ipaddr }}"
