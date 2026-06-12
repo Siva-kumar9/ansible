@@ -1,0 +1,18 @@
+- name: Variables
+  hosts:  local
+  connection: local
+  vars:
+    COURSE: DevOps with AWS #string
+    DURATION: 120 #number
+    LIVE: true #boolean
+    TOPICS: #list
+    - Linux
+    - Shell Script
+    - Ansible
+    TOOLS: #map
+      ci: jenkins
+      cloud:  aws
+  tasks:
+  - name: Print Variables
+    ansible.builtin.debug:
+      msg: "These Course is {{COURSE}} , Duration is {{DURATION}} , is it LIVE?, Topics are {{TOPICS}} Tools are {{TOOLS}}"
