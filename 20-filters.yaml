@@ -1,0 +1,9 @@
+- name: Variables
+  hosts:  local
+  connection: local
+  vars:
+    COURSE: 
+  tasks:
+  - name: Print Variables
+    ansible.builtin.debug:
+      msg: "Course is : | default('devOps')"
