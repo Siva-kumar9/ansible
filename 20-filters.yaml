@@ -10,3 +10,8 @@
       fruits: "apple, banana, cherry"
     ansible.builtin.debug:
       msg: "Fruits are {{fruits | split(',') }}"
+  - name: Print toUpper
+    vars:
+      name: Sivakumar
+    ansible.builtin.debug:
+      msg: "TO Upper is {{ name | upper }}"
