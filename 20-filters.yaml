@@ -2,6 +2,11 @@
   hosts:  local
   connection: local
   tasks:
-  - name: Print Variables
+  - name: Print default
     ansible.builtin.debug:
       msg: "course is {{ COURSE | default('devOps') }}"
+  - name: print split
+    vars:
+      fruits: "apple, banana, cherry"
+    ansible.builtin.debug:
+      msg: "Fruits are {{fruits | split(,) }}"
