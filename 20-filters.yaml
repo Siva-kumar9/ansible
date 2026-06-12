@@ -20,4 +20,10 @@
       name: Sivakumar
     ansible.builtin.debug:
       msg: "TO Upper is {{ name | lower }}"
+  - name: Print maxi
+    vars:
+      name: [100,200,300,500,400,150,325,55]
+    ansible.builtin.debug:
+      msg: "TO Upper is {{ name | max }}"
+
 
