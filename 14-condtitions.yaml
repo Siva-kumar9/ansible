@@ -1,10 +1,8 @@
 - name: Variables
   hosts:  local
   connection: local
-  vars_prompt:
-    - name: NUM
-      prompt: "Enter Number"
-      private: false
+  vars:
+    NUM: 10
   tasks:
   - name: Print No greater than
     ansible.builtin.debug:
