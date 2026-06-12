@@ -32,6 +32,8 @@
       msg: "TO mini is {{ name | min }}"
   - name: Convert list to map
     vars:
-      name: [100,200,300,500,400,150,325,55]
+      name: Sivakumar
+      age: 22
+      surname: kaki
     ansible.builtin.debug:
-      msg: "TO map is {{ name | items2dict }}"
+      msg: "TO map is {{ name | dict2items }}"
