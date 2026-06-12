@@ -6,4 +6,4 @@
   tasks:
   - name: Print Variables
     ansible.builtin.debug:
-      msg: "Course is: {{COURSE | default('devOps')}}"
+      msg: "Course is: {{COURSE | default('devOps') }}"
