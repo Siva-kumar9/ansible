@@ -15,3 +15,9 @@
       name: Sivakumar
     ansible.builtin.debug:
       msg: "TO Upper is {{ name | upper }}"
+  - name: Print tolower
+    vars:
+      name: Sivakumar
+    ansible.builtin.debug:
+      msg: "TO Upper is {{ name | lower }}"
+
