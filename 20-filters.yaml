@@ -34,4 +34,4 @@
     vars:
       name: [100,200,300,500,400,150,325,55]
     ansible.builtin.debug:
-      msg: "TO map is {{ name | dict2items }}"
+      msg: "TO map is {{ name | items2dict }}"
