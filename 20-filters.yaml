@@ -48,6 +48,6 @@
       msg: "TO map is {{ names | items2dict }}"
   - name: check IP
     vars:
-      ip: 54.227.184.84
+      ip: "54.227.184.84"
     ansible.builtin.debug:
-      msg: "TO ipaddress is {{ ip | ansible.utils.ipaddr }}"
+      msg: "the ipaddress is {{ ip | ansible.utils.ipaddr }}"
