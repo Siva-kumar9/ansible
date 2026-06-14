@@ -11,6 +11,8 @@
     ansible.builtin.debug:
       msg: "Fruits are {{fruits | split(',') }}"
   - name: Print toUpper
+    tags:
+    - upper
     vars:
       name: Sivakumar
     ansible.builtin.debug:
