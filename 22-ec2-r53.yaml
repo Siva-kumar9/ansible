@@ -1,0 +1,29 @@
+- name: Create ec2 instances and r53 Roles
+  hosts: local
+  connection: local
+  vars:
+    ami_id: ami-0220d79f3f480ecf5
+    sys_grp:  sg-0cf2573541701f747
+    subnet_id:  subnet-05087e067a86d45dc
+    instance_type: t3.micro
+    instances:
+    - mysql
+    - frontend
+    - backend
+  tasks:
+  # - name: Install python lib
+  #   ansible.builtin.pip:
+  #     name: "{{ item }}"
+  #     executable: pip3.9
+  #   loop:
+  #   - botecore
+  #   - boto3
+  - name: Create 3 instances
+    amazon.aws.ec2_instances:
+      name: "{{ item }}"
+      image_id: "{{ ami_id }}"
+      system_group: "{{ sys_grp }}"
+      instance_type:  "{{ instance_type }}"
+      subnet_id:  "{{ subnet_id }}"
+    loop: "{{ instances }}"
+
