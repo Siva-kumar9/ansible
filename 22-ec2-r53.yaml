@@ -6,10 +6,7 @@
     sys_grp:  sg-0cf2573541701f747
     subnet_id:  subnet-05087e067a86d45dc
     instance_type: t3.micro
-    instances:
-    - mysql
-    - frontend
-    - backend
+
   tasks:
   - name: Install python lib
     ansible.builtin.pip:
@@ -25,5 +22,8 @@
       system_group: "{{ sys_grp }}"
       instance_type:  "{{ instance_type }}"
       subnet_id:  "{{ subnet_id }}"
-    loop: "{{ instances }}"
+    loop:
+    - mysql
+    - frontend
+    - backend
 
