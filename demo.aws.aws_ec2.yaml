@@ -1,5 +1,4 @@
 plugin: amazon.aws.aws_ec2
-iam_role_arn: arn:aws:iam::1234567890:role/assumed-ansible
 regions:
   - us-east-1
 filters:
