@@ -4,7 +4,7 @@
   become: yes
   vars:
     ami_id: ami-0220d79f3f480ecf5
-    sys_grp:  sg-0cf2573541701f747
+    sg_id:  sg-0cf2573541701f747
     subnet_id:  subnet-05087e067a86d45dc
     instance_type: t3.micro
     instances:
@@ -19,12 +19,12 @@
     loop:
     - boto3
     - botocore
-  - name: Create 3 instances
+  - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
+      subnet_id: "{{ subnet_id }}"
+      security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
-      security_group: "{{ sys_grp }}"
-      instance_type:  "{{ instance_type }}"
-      subnet_id:  "{{ subnet_id }}"
-    loop: "{{instances}}"
-    reister: ec2-info
+      instance_type: "{{ instance_type }}"
+    loop: "{{ instances }}"
+    register: ec2_info
