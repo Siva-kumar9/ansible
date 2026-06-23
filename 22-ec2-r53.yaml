@@ -1,6 +1,7 @@
 - name: Create ec2 instances and r53 Roles
   hosts: local
   connection: local
+  become: yes
   vars:
     ami_id: ami-0220d79f3f480ecf5
     sys_grp:  sg-0cf2573541701f747
@@ -26,5 +27,3 @@
     - mysql
     - frontend
     - backend
-
-# git
