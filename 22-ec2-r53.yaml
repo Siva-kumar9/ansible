@@ -1,6 +1,6 @@
 - name: Create ec2 instances and r53 Roles
-  hosts: local
-  connection: local
+  hosts: web
+  connection: web
   become: yes
   vars:
     ami_id: ami-0220d79f3f480ecf5
